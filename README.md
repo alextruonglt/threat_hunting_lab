@@ -39,6 +39,9 @@ DeviceFileEvents
 | project Timestamp, DeviceName, ActionType, FileName, FolderPath, SHA256, Account = InitiatingProcessAccountName
 ```
 
+<img width="1330" height="453" alt="Screenshot 2025-08-26 at 10 44 09 AM" src="https://github.com/user-attachments/assets/219da2f1-2d27-436c-b0b3-07c75434bc93" />
+
+
 ---
 
 ### 2. Searched the `DeviceProcessEvents` Table
@@ -53,6 +56,7 @@ DeviceProcessEvents
 | where ProcessCommandLine contains "tor-browser-windows-x86_64"  
 | project Timestamp, DeviceName, AccountName, ActionType, FileName, FolderPath, SHA256, ProcessCommandLine
 ```
+<img width="1322" height="234" alt="Screenshot 2025-08-26 at 10 44 35 AM" src="https://github.com/user-attachments/assets/20be0010-6f00-47cf-8a24-fbac9bfe2dff" />
 
 ---
 
@@ -69,6 +73,7 @@ DeviceProcessEvents
 | project Timestamp, DeviceName, AccountName, ActionType, FileName, FolderPath, SHA256, ProcessCommandLine  
 | order by Timestamp desc
 ```
+<img width="1411" height="455" alt="Screenshot 2025-08-26 at 10 45 45 AM" src="https://github.com/user-attachments/assets/bcda38b5-e1c4-40f0-9bb0-096550f8edcd" />
 
 ---
 
@@ -87,6 +92,7 @@ DeviceNetworkEvents
 | project Timestamp, DeviceName, InitiatingProcessAccountName, ActionType, RemoteIP, RemotePort, RemoteUrl, InitiatingProcessFileName, InitiatingProcessFolderPath  
 | order by Timestamp desc
 ```
+<img width="1450" height="350" alt="Screenshot 2025-08-26 at 10 47 05 AM" src="https://github.com/user-attachments/assets/770228ff-e052-4753-afa3-7865bf99a0e8" />
 
 ## Chronological Event Timeline 
 
